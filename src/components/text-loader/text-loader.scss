@@ -1,0 +1,47 @@
+@import '../../utils/variables';
+
+.text-loader {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &-dot {
+    width: 10px;
+    height: 10px;
+    background-color: $white;
+    border-radius: 50%;
+    display: block;
+    opacity: 0.5;
+
+    &--one {
+      animation: glow 1s ease infinite;
+    }
+
+    &--two {
+      animation: glow 1s ease 0.2s infinite;
+    }
+
+    &--three {
+      animation: glow 1s ease 0.4s infinite;
+    }
+  }
+}
+
+@keyframes glow {
+  from {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+
+  to {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}

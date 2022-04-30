@@ -1,0 +1,28 @@
+@import '../../utils/variables';
+
+.header {
+
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 18px 48px;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $primary;
+    }
+
+    & .active {
+      background-color: $primary;
+    }
+  }
+}
